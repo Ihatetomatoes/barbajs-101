@@ -1,1 +1,23 @@
 /* Transition with cover screen */
+.with-cover-leave-active,
+.with-cover-enter-active,
+.with-cover-leave-active .transition,
+.with-cover-enter-active .transition  {
+    transition: transform 0.5s var(--easing);
+}
+
+/* Cover in */
+.with-cover-leave .transition {
+    transform: translateY(-100%);
+}
+.with-cover-leave-to .transition {
+    transform: translateY(0);
+}
+
+/* Cover down */
+.with-cover-enter .transition {
+    transform: translateY(0);
+}
+.with-cover-enter-to .transition {
+    transform: translateY(100%);
+}
