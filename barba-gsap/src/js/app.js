@@ -1,6 +1,9 @@
 import barba from '@barba/core';
+import barbaPrefetch from '@barba/prefetch';
 import gsap from 'gsap';
 import { revealProject, leaveToProject, leaveFromProject, animationEnter, animationLeave } from './animations';
+
+barba.use(barbaPrefetch);
 
 const resetActiveLink = () => gsap.set('a.is-active span', {
     xPercent: -100,
@@ -17,6 +20,14 @@ barba.hooks.after(() => {
 });
 
 barba.init({
+    views: [
+        {
+            namespace: 'architecture',
+            beforeEnter(data){
+                console.log(data, 'beforeEnter architecture');
+            }
+        }
+    ],
     transitions: [
         {
             name: 'detail',
