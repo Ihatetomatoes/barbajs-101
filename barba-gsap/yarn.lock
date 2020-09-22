@@ -872,6 +872,11 @@
   resolved "https://registry.yarnpkg.com/@barba/prefetch/-/prefetch-2.1.10.tgz#69ab0ab579c99b0d78d219acd81dd4de68755e99"
   integrity sha512-5mdrn9uEL4FoBDRLl+C7o06NaYP7Xsu2AAoD8YLKrgPemJP5Hjq6++kG8DtYrvvTjPPhuFMxSjGJxnhOKYalnQ==
 
+"@barba/router@^2.1.10":
+  version "2.1.10"
+  resolved "https://registry.yarnpkg.com/@barba/router/-/router-2.1.10.tgz#982fa22d74e9600b7d2bf16d51e2f9e730f3a621"
+  integrity sha512-nGTeynbDaoOG97T5lCLslLKuw1qgSSaRwZE9/zRQDuvVoShS3MCf5ISDtXmQ2lPxQs3bjjNHD27mAeTd+2bMVQ==
+
 "@eslint/eslintrc@^0.1.3":
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/@eslint/eslintrc/-/eslintrc-0.1.3.tgz#7d1a2b2358552cc04834c0979bd4275362e37085"

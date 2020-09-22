@@ -1,17 +1,27 @@
 import barba from '@barba/core';
-import barbaPrefetch from '@barba/prefetch';
+import barbaRouter from '@barba/router';
 import gsap from 'gsap';
 import { revealProject, leaveToProject, leaveFromProject, animationEnter, animationLeave } from './animations';
 
-barba.use(barbaPrefetch);
+const myRoutes = [
+    { name: 'home', path: '/index.html'},
+    { name: 'architecture', path: '/architecture.html'},
+    { name: 'detail', path: '/detail-page.html'},
+    { name: 'detail-2', path: '/detail-page-2.html'}
+]
+
+barba.use(barbaRouter, {
+    routes: myRoutes
+});
 
 const resetActiveLink = () => gsap.set('a.is-active span', {
     xPercent: -100,
     transformOrigin: 'left'
 });
 
-barba.hooks.enter(() => {
+barba.hooks.enter((data) => {
     // console.log('enter');
+    console.log({data});
     window.scrollTo(0, 0);
 });
 
@@ -61,7 +71,7 @@ barba.init({
         }, {
             name: 'from-detail',
             from: {
-                namespace: ['detail']
+                route: ['detail-2', 'detail']
             },
             leave: ({current}) => leaveFromProject(current.container),
             enter({next}){

@@ -36,6 +36,7 @@
   "dependencies": {
     "@barba/core": "^2.8.0",
     "@barba/prefetch": "^2.1.10",
+    "@barba/router": "^2.1.10",
     "gsap": "^3.5.1",
     "reset-css": "^5.0.1"
   }
